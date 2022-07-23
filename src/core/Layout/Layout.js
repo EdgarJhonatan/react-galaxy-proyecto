@@ -22,8 +22,20 @@ const Layout = ({ children }) => {
                         Usuarios
                      </NavLink>
                   </li>
-                  <li>Mis pagos</li>
-                  <li>Mis deudas</li>
+                  <li>
+                     <NavLink
+                        to="/pago"
+                        className={({ isActive }) => (isActive ? "active" : undefined)}>
+                        Mis Pagos
+                     </NavLink>
+                  </li>
+                  <li>
+                     <NavLink
+                        to="/deuda"
+                        className={({ isActive }) => (isActive ? "active" : undefined)}>
+                        Mis deudas
+                     </NavLink>
+                  </li>
                   <li>Caja chica</li>
                   <li>Reportería</li>
                   <li>

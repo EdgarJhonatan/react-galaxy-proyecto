@@ -5,6 +5,8 @@ import HomePage from "./core/pages/home/HomePage";
 
 const Auth = lazy(() => import("./features/auth/AuthRouter"));
 const User = lazy(() => import("./features/user/UserRouter"));
+const Pago = lazy(() => import("./features/pagos/PagoRouter"));
+const Deuda = lazy(() => import("./features/deudas/DeudaRouter"));
 
 const AppRouter = () => {
    return (
@@ -15,6 +17,8 @@ const AppRouter = () => {
                   <Route index element={<Navigate to="/auth/login" replace />} />
                   <Route path="home" element={<HomePage />} />
                   <Route path="/user/*" element={<User />}></Route>
+                  <Route path="/pago/*" element={<Pago />}></Route>
+                  <Route path="/deuda/*" element={<Deuda />}></Route>
                </Route>
 
                <Route path="/auth/*" element={<Auth />}></Route>

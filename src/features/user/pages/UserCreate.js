@@ -22,7 +22,7 @@ const UserCreate = () => {
    return (
       <form onSubmit={handleSubmit}>
          <input type="text" placeholder="Nombre" {...getFieldProps("name")} />
-         <input type="text" placeholder="Precio" {...getFieldProps("email")} />
+         <input type="text" placeholder="email" {...getFieldProps("email")} />
          <label htmlFor="">
             <input type="checkbox" {...getFieldProps("active")} />
             Activo
